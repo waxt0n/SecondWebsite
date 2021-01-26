@@ -21,4 +21,6 @@ urlpatterns = [
     path('', include('home.urls')),
     path('highscores/', include('highscores.urls')),
     path('events/', include('events.urls')),
+    path('hall-of-fame/', include('archive.urls')),
+    path('archive/', include('archive.urls')),
 ]

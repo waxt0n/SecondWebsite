@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     
     'home',
     'highscores',
-    'events'
+    'events',
+    'archive',
 ]
 
 # config/settings.py
