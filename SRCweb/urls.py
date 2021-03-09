@@ -22,6 +22,6 @@ urlpatterns = [
     path('', include('home.urls')),
     path('highscores/', include('highscores.urls')),
     path('events/', include('events.urls')),
-    path('api-token-auth/', obtain_jwt_token, name='api'),
+    path('ranked/', include('ranked.urls')),
     path('api/events/', include('events.api.urls', namespace="api-events")),
 ]

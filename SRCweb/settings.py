@@ -60,7 +60,8 @@ INSTALLED_APPS = [
     
     'home',
     'highscores',
-    'events'
+    'events',
+    'ranked',
 ]
 
 # config/settings.py
