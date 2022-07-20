@@ -17,7 +17,7 @@ class Score(models.Model):
     player = models.ForeignKey(User, on_delete=models.CASCADE)
 
     score = models.IntegerField()
-    time_set = models.DateTimeField(null=True, blank=True)
+    time_set = models.DateTimeField(auto_now_add=True)
     source = models.URLField(null=False, blank=False)
     approved = models.BooleanField(default=False, null=False)
     clean_code = models.CharField(max_length=600, null=False, blank=False)

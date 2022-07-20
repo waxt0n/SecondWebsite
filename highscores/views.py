@@ -2,7 +2,6 @@ from discordoauth2.models import User
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from .models import Leaderboard, Score, CleanCodeSubmission
-from datetime import datetime
 from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required
 from django.db.models import Sum, Max, Q
@@ -247,7 +246,6 @@ def extract_form_data(form: ScoreForm, request):
     score_obj.leaderboard = form.cleaned_data['leaderboard']
     score_obj.player = request.user
     score_obj.score = form.cleaned_data['score']
-    score_obj.time_set = datetime.now()
     score_obj.approved = False
     score_obj.source = form.cleaned_data['source']
     score_obj.clean_code = form.cleaned_data['clean_code']
